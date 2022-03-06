@@ -1,4 +1,4 @@
-
+import board
 
 
 class Game:
@@ -7,18 +7,21 @@ class Game:
     """
 
     def __init__(self):
-        # replace `pass` with the desired attributes and add any
-        # additional parameters to the function
-        pass
+        self.board = board.Board()
+        self.turn = None
 
-    def promotion(self):
+    def promotion(self, square):
+        """
+        square: a tuple (rank, file) describing a square
+        """
         # add any parameters necessary and replace the body with
         # functionality on promoting a Pawn that has reached the
         # end of the board
         pass
 
-    def move(self):
-        # add any parameters necessary and replace the body with
-        # functionality of moving a a piece from its current location
-        # to a destination
-        pass
+    def move(self, start, to):
+        """
+        start: starting square
+        to: square to move to
+        """
+        print(f"Moving from {start} to {to}")
